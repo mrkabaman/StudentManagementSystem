@@ -1,8 +1,5 @@
 package org.studentmanagement;
 
-/**
- * Created by Arlef Kaba, Jr. on 10/02/2023.
- */
 public class Student {
     private String firstName;
     private String lastName;
@@ -25,5 +22,43 @@ public class Student {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public int getGradeYear() {
+        return gradeYear;
+    }
+
+    public void setGradeYear(int gradeYear) {
+        this.gradeYear = gradeYear;
+    }
+
+    public void setStudentID(){
+        id++;
+        this.studentID = gradeYear + "" + id;
+    }
+
+    public void setCourse(String course) {
+        this.courses = this.courses + "\n " + course;
+    }
+
+    public int getCostOfCourse()
+    {
+        return this.costOfCourse;
+    }
+    public void setTuitionBalance(int value) {
+        this.tuitionBalance = value;
+    }
+
+    public int getTuitionBalance()
+    {
+        return this.tuitionBalance;
+    }
+
+    public String toString(){
+        return "Name: " + firstName + "" + lastName +
+                "\nGrade Level: " + gradeYear +
+                "\nStudent ID: " + studentID +
+                "\nCourses Enrolled: " + courses +
+                "\nBalance: $" + tuitionBalance;
     }
 }
